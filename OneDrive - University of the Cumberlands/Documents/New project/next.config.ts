@@ -50,4 +50,6 @@ const withMDX = createMDX({
   extension: /\.(md|mdx)$/
 });
 
-export default withMDX(makeNextConfig);
+export default function nextConfig(phase: string) {
+  return withMDX(makeNextConfig(phase));
+}
