@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 import createMDX from "@next/mdx";
 
 const csp = [
@@ -16,7 +17,9 @@ const csp = [
   "upgrade-insecure-requests"
 ].join("; ");
 
-const nextConfig: NextConfig = {
+function makeNextConfig(phase: string): NextConfig {
+  return {
+  distDir: phase === PHASE_DEVELOPMENT_SERVER ? ".next-dev" : ".next",
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     remotePatterns: [
@@ -40,10 +43,11 @@ const nextConfig: NextConfig = {
       }
     ];
   }
-};
+  };
+}
 
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/
 });
 
-export default withMDX(nextConfig);
+export default withMDX(makeNextConfig);

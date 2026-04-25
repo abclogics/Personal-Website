@@ -1,0 +1,8 @@
+.next
+.next-dev
+node_modules
+*.log
+local-preview-server.mjs
+preview-detached.*
+local-preview.*
+next-dev.*
