@@ -10,7 +10,7 @@ export function Header() {
       <Container className="flex min-h-16 items-center justify-between gap-5">
         <Link className="focus-ring flex min-w-0 flex-col rounded-sm" href="/">
           <span className="text-sm font-semibold">{siteConfig.name}</span>
-          <span className="text-xs text-white/65">{siteConfig.brand}</span>
+          {/* <span className="text-xs text-white/65">{siteConfig.brand}</span> */}
         </Link>
         <nav aria-label="Primary navigation" className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (

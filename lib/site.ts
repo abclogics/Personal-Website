@@ -5,7 +5,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://comptconsulting.com",
   email: "oluseye.fadiran@gmail.com",
   bookingForwardEmail: "seyetest@gmail.com",
-  portraitImage: "",
+  portraitImage: "/images/dr-oluseye-fadiran.png",
   description:
     "Executive technology leadership for growth, security, and scale through AI strategy, cybersecurity governance, cloud modernization, and IT transformation.",
   social: {
